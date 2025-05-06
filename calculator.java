@@ -1,9 +1,12 @@
 public class calculator{
    public static void main(String[] args) {
       
-      system.out.println("hola");
-      system.out.println("hola");
+     
    }
+public int add (int a , int b ){
+    int suma = a +b ;
+   return suma ;
+} 
 
 
 }
