@@ -1,6 +1,10 @@
 public class calculator{
    public static void main(String[] args) {
-      
+      system.out.println("suma "+ add(3,4));
+      system.out.println("resta "+ res(13,4));
+      system.out.println("producto "+ mul(322,44));
+      system.out.println("resta "+ div(313,324));
+      system.out.println("modulo "+ mod(33,3));
      
    }
 public int add (int a , int b ){
