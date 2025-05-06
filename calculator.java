@@ -15,7 +15,12 @@ public int res(int a, int b){
 
    return a*b;
 }
+public div (int a, int b){
 
+   if(b==0)
+      system.out.println("error");
+   else return a/b;
+}
 
 
 }
