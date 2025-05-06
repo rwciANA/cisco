@@ -21,6 +21,10 @@ public div (int a, int b){
       system.out.println("error");
    else return a/b;
 }
+   public mod (int a, int b){
+
+      return a%b;
+   }
 
 
 }
