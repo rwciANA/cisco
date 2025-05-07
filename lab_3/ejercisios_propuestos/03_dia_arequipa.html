@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Días para el Día de Arequipa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #resultado {
+      font-size: 24px;
+      margin-top: 20px;
+      color: #b22222;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>¿Cuántos días faltan para el Día de Arequipa?</h1>
+  <div id="resultado"></div>
+
+  <script>
+    function calcularDiasFaltantes() {
+      const hoy = new Date();
+      const añoActual = hoy.getFullYear();
+      let proximo15Agosto = new Date(añoActual, 7, 15);
+
+      if (hoy > proximo15Agosto) {
+        proximo15Agosto = new Date(añoActual + 1, 7, 15);
+      }
+
+      const unDia = 1000 * 60 * 60 * 24; 
+      const diferencia = Math.ceil((proximo15Agosto - hoy) / unDia);
+
+      document.getElementById('resultado').textContent =
+        `Faltan ${diferencia} día(s) para el Día de Arequipa 🎉`;
+    }
+
+    
+    calcularDiasFaltantes();
+  </script>
+
+</body>
+</html>
