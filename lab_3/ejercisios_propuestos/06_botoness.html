@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cambiar Tamaño y Color de Letra</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #texto {
+      font-size: 24px;
+      color: black;
+    }
+    button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Controlar Tamaño y Color del Texto</h2>
+  
+  <p id="texto">Este es un texto de prueba.</p>
+
+  <button onclick="cambiarTamaño('aumentar')">Aumentar Tamaño</button>
+  <button onclick="cambiarTamaño('disminuir')">Disminuir Tamaño</button>
+  <button onclick="cambiarColor('rojo')">Color Rojo</button>
+  <button onclick="cambiarColor('verde')">Color Verde</button>
+  <button onclick="cambiarColor('azul')">Color Azul</button>
+
+  <script>
+    let tamaño = 24;
+
+    function cambiarTamaño(accion) {
+      if (accion === 'aumentar') {
+        tamaño += 2;
+      } else if (accion === 'disminuir') {
+        tamaño -= 2;
+      }
+      document.getElementById('texto').style.fontSize = tamaño + 'px';
+    }
+
+    function cambiarColor(color) {
+      document.getElementById('texto').style.color = color;
+    }
+  </script>
+
+</body>
+</html>
