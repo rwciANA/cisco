@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Extraer Código de Google Meet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      width: 80%;
+      margin-top: 10px;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Extraer código de Google Meet</h2>
+  <input type="text" id="urlMeet" placeholder="Pega aquí el URL de la reunión">
+  <button onclick="extraerCodigo()">Obtener Código</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function extraerCodigo() {
+      const url = document.getElementById('urlMeet').value.trim();
+      const match = url.match(/meet\.google\.com\/([a-zA-Z0-9\-]+)/);
+
+      if (match && match[1]) {
+        const codigoSinGuiones = match[1].replace(/-/g, '');
+        document.getElementById('resultado').textContent = `codigo: ${codigoSinGuiones}`;
+      } else {
+        document.getElementById('resultado').textContent = 'url no válida de Google Meet.';
+      }
+    }
+  </script>
+
+</body>
+</html>
