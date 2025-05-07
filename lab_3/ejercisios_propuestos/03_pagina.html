@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inversor de Texto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Invertir Texto</h2>
+  <input type="text" id="textoEntrada" placeholder="Escribe algo...">
+  <button onclick="invertirTexto()">Invertir</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function invertirTexto() {
+      const texto = document.getElementById('textoEntrada').value;
+      const textoInvertido = texto.split('').reverse().join('');
+      document.getElementById('resultado').textContent = textoInvertido;
+    }
+  </script>
+
+</body>
+</html>
